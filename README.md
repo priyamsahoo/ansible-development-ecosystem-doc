@@ -14,6 +14,8 @@ This guide illustrates a comprehensive Ansible development workflow that showcas
 
 - Check system requirements and install ansible-creator if needed. Ensure all requirements in the `system requirements` box have green ticks.
 
+[system-requirement-box]
+
 - Click "Initialize a collection" to open the "Init" interface. Fill the form with the collection name, initialization path, verbosity, and logging options. Click "Create" for scaffolding the collection in the desired location. You have the open to review the logs or open the log file in VS Code editor for details.
 
 - Click on `Open collection` button to add collection folder to the workspace.
@@ -22,15 +24,17 @@ NOTE: For a more detailed explanation about using Ansible Creator in the VS Code
 
 ## Step 2: Installing collection using ansible-development-environment (ade, pip4a)
 
--  With the initial collection structure in place, use 'ansible-development-environment' (pip4a) to install the newly created collection in editable mode, similar to Python modules.
+- With the initial collection structure in place, use 'ansible-development-environment' (pip4a) to install the newly created collection in editable mode, similar to Python modules.
 
--  Navigate to the cooelction directory and run:
+- Navigate to the cooelction directory and run:
 
 ```console
 $ pip4a install -e .
 ```
 
 - This installation method adds the collection in the system paths so that ansible knows about it. Additinally, it enhances the development process by allowing on-the-go changes to the module code.
+
+![pip4-a](./media/pip4a-installation.gif)
 
 ## Step 3: Add python code to bring the collection to life
 
@@ -50,6 +54,8 @@ NOTE: for details regarding the module development, refer to the [ansible module
 
 - With its integration in the extension, ansible-lint can detect mistakes, such as incorrect option values and missing required options, along with other rules for ansible best practices by providing feedback in the editor (red and yellow sqigly lines) and it the `Problems` tab in the vscode.
 
+![ansible-lint](./media/ansible-lint.gif)
+
 ## Step 5: Using ansible-navigator to tun the playbook with the collection module
 
 - The ansible extension in VS Code has the ability to detect the playbook files and provide several
@@ -58,6 +64,8 @@ ansible related options for it. One such option is to run the playbook without h
 - Right-click on the opened playbook in the editor and choose `Run Ansible Playbook via`. This provides options to run the playbook via ansible-navigator or ansible-playbook.
 
 - Select `Run playbook via ansible-navigator run` to execute the playbook in the terminal within VS Code.
+
+![ansible-navigator](./media/ansible-navigator-run.gif)
 
 ## Step 6: Adapting to changes in the module code
 
