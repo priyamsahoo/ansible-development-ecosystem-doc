@@ -34,6 +34,12 @@ $ pip4a install -e .
 
 - This installation method adds the collection in the system paths so that ansible knows about it. Additinally, it enhances the development process by allowing on-the-go changes to the module code.
 
+- You can check if the collection is installed or not by using ansible-galaxy command. In the terminal, running the following command should show the name of the newly created collection:
+
+```console
+$ ansible-galaxy collection list
+```
+
 ![pip4-a](./media/pip4a-installation.gif)
 
 ## Step 3: Add python code to bring the collection to life
