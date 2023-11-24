@@ -14,11 +14,13 @@ This guide illustrates a comprehensive Ansible development workflow that showcas
 
 - Check system requirements and install ansible-creator if needed. Ensure all requirements in the `system requirements` box have green ticks.
 
-[system-requirement-box]
+![ansible-creator-menu](media/ansible-creator-menu-installed.png)
 
 - Click "Initialize a collection" to open the "Init" interface. Fill the form with the collection name, initialization path, verbosity, and logging options. Click "Create" for scaffolding the collection in the desired location. You have the open to review the logs or open the log file in VS Code editor for details.
 
 - Click on `Open collection` button to add collection folder to the workspace.
+
+![scaffold-collection](media/create-collection.gif)
 
 NOTE: For a more detailed explanation about using Ansible Creator in the VS Code Ansible Extension, refer to [doc: ansible-creator].
 
